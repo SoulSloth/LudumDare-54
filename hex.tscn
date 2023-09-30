@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://obvkgc3wbfg6"]
+
+[ext_resource type="Texture2D" uid="uid://g6v1ah2botj5" path="res://assets/blender/hexes/0010.png" id="2_88xmx"]
+[ext_resource type="Script" path="res://hex.gd" id="2_afq3a"]
+[ext_resource type="Texture2D" uid="uid://diard7slgln22" path="res://assets/blender/hexes/0001.png" id="2_vpo5c"]
+[ext_resource type="Texture2D" uid="uid://bd2mat72q55b7" path="res://assets/blender/hexes/0003.png" id="4_7anjg"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_byg3o"]
+
+[node name="Hex" type="Node2D"]
+script = ExtResource("2_afq3a")
+sprites = Array[Resource]([SubResource("CompressedTexture2D_byg3o"), ExtResource("2_88xmx"), ExtResource("2_vpo5c"), ExtResource("4_7anjg")])
+sprite_index = 1
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_88xmx")
+region_rect = Rect2(0, 0, 192, 250)
+
+[node name="Selection" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Selection"]
+visible = false
+position = Vector2(0, 47)
+polygon = PackedVector2Array(-1, -5, -58, -28, -58, -75, -1, -98, 56, -75, 56, -28)
+
+[node name="Polygon2D" type="Polygon2D" parent="Selection"]
+visible = false
+position = Vector2(0, 47)
+color = Color(1, 1, 1, 0.45098)
+polygon = PackedVector2Array(-1, -5, -58, -28, -58, -75, -1, -98, 56, -75, 56, -28)
+
+[connection signal="input_event" from="Selection" to="." method="_on_selection_input_event"]
+[connection signal="mouse_entered" from="Selection" to="." method="_on_selection_mouse_entered"]
+[connection signal="mouse_exited" from="Selection" to="." method="_on_selection_mouse_exited"]
