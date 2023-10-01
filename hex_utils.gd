@@ -53,7 +53,6 @@ func find_path(start_loc: Vector2, goal_loc: Vector2, offset_array: Array[Array]
 	while current != start_loc:
 		path.append(current)
 		current = came_from[current]
-	path.append(start_loc)
 	path.reverse();
 	
 	return path

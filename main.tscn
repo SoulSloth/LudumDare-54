@@ -34,7 +34,7 @@ x_hexes = 13
 y_hexes = 11
 x_diff = 114
 y_diff = 70
-selected_hex_resource = ExtResource("11_81mvj")
+selected_hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329707" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(200, 200)
@@ -46,10 +46,12 @@ coords = Vector2(1, 0)
 [node name="@Node2D@329709" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(428, 200)
 coords = Vector2(2, 0)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329710" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(542, 200)
 coords = Vector2(3, 0)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329711" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(656, 200)
@@ -62,6 +64,7 @@ coords = Vector2(5, 0)
 [node name="@Node2D@329713" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(884, 200)
 coords = Vector2(6, 0)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329714" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(998, 200)
@@ -74,6 +77,7 @@ coords = Vector2(8, 0)
 [node name="@Node2D@329716" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1226, 200)
 coords = Vector2(9, 0)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329717" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1340, 200)
@@ -86,6 +90,7 @@ coords = Vector2(11, 0)
 [node name="@Node2D@329719" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1568, 200)
 coords = Vector2(12, 0)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329720" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(257, 270)
@@ -123,14 +128,17 @@ hex_resource = ExtResource("3_g82uq")
 [node name="@Node2D@329727" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1055, 270)
 coords = Vector2(7, 1)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329728" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1169, 270)
 coords = Vector2(8, 1)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329729" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1283, 270)
 coords = Vector2(9, 1)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329730" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1397, 270)
@@ -143,6 +151,7 @@ coords = Vector2(11, 1)
 [node name="@Node2D@329732" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1625, 270)
 coords = Vector2(12, 1)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329733" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(200, 340)
@@ -171,6 +180,7 @@ coords = Vector2(5, 2)
 [node name="@Node2D@329739" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(884, 340)
 coords = Vector2(6, 2)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329740" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(998, 340)
@@ -187,6 +197,7 @@ coords = Vector2(9, 2)
 [node name="@Node2D@329743" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1340, 340)
 coords = Vector2(10, 2)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329744" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1454, 340)
@@ -195,6 +206,7 @@ coords = Vector2(11, 2)
 [node name="@Node2D@329745" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1568, 340)
 coords = Vector2(12, 2)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329746" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(257, 410)
@@ -219,6 +231,7 @@ coords = Vector2(4, 3)
 [node name="@Node2D@329751" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(827, 410)
 coords = Vector2(5, 3)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329752" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(941, 410)
@@ -235,6 +248,7 @@ coords = Vector2(8, 3)
 [node name="@Node2D@329755" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1283, 410)
 coords = Vector2(9, 3)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329756" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1397, 410)
@@ -247,6 +261,7 @@ coords = Vector2(11, 3)
 [node name="@Node2D@329758" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1625, 410)
 coords = Vector2(12, 3)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329759" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(200, 480)
@@ -271,10 +286,12 @@ coords = Vector2(4, 4)
 [node name="@Node2D@329764" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(770, 480)
 coords = Vector2(5, 4)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329765" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(884, 480)
 coords = Vector2(6, 4)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329766" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(998, 480)
@@ -287,6 +304,7 @@ coords = Vector2(8, 4)
 [node name="@Node2D@329768" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1226, 480)
 coords = Vector2(9, 4)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329769" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1340, 480)
@@ -299,6 +317,7 @@ coords = Vector2(11, 4)
 [node name="@Node2D@329771" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1568, 480)
 coords = Vector2(12, 4)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329772" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(257, 550)
@@ -319,6 +338,7 @@ coords = Vector2(3, 5)
 [node name="@Node2D@329776" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(713, 550)
 coords = Vector2(4, 5)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329777" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(827, 550)
@@ -327,6 +347,7 @@ coords = Vector2(5, 5)
 [node name="@Node2D@329778" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(941, 550)
 coords = Vector2(6, 5)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329779" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1055, 550)
@@ -339,6 +360,7 @@ coords = Vector2(8, 5)
 [node name="@Node2D@329781" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1283, 550)
 coords = Vector2(9, 5)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329782" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1397, 550)
@@ -351,30 +373,37 @@ coords = Vector2(11, 5)
 [node name="@Node2D@329784" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1625, 550)
 coords = Vector2(12, 5)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329785" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(200, 620)
 coords = Vector2(0, 6)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329786" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(314, 620)
 coords = Vector2(1, 6)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329787" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(428, 620)
 coords = Vector2(2, 6)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329788" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(542, 620)
 coords = Vector2(3, 6)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329789" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(656, 620)
 coords = Vector2(4, 6)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329790" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(770, 620)
 coords = Vector2(5, 6)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329791" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(884, 620)
@@ -383,6 +412,7 @@ coords = Vector2(6, 6)
 [node name="@Node2D@329792" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(998, 620)
 coords = Vector2(7, 6)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329793" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1112, 620)
@@ -429,6 +459,7 @@ coords = Vector2(4, 7)
 [node name="@Node2D@329803" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(827, 690)
 coords = Vector2(5, 7)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329804" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(941, 690)
@@ -487,6 +518,7 @@ coords = Vector2(4, 8)
 [node name="@Node2D@329816" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(770, 760)
 coords = Vector2(5, 8)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329817" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(884, 760)
@@ -517,6 +549,7 @@ coords = Vector2(11, 8)
 [node name="@Node2D@329823" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1568, 760)
 coords = Vector2(12, 8)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329824" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(257, 830)
@@ -541,6 +574,7 @@ coords = Vector2(4, 9)
 [node name="@Node2D@329829" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(827, 830)
 coords = Vector2(5, 9)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329830" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(941, 830)
@@ -594,6 +628,7 @@ coords = Vector2(4, 10)
 [node name="@Node2D@329842" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(770, 900)
 coords = Vector2(5, 10)
+hex_resource = ExtResource("3_g82uq")
 
 [node name="@Node2D@329843" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(884, 900)
@@ -626,12 +661,11 @@ coords = Vector2(12, 10)
 hex_resource = ExtResource("11_81mvj")
 
 [node name="agent" parent="Terrain" instance=ExtResource("5_i6ui0")]
-position = Vector2(257, 345)
+position = Vector2(257.777, 345)
 
 [node name="Agents" type="Node2D" parent="."]
 
 [node name="TickTimer" type="Timer" parent="."]
-wait_time = 0.5
 autostart = true
 
 [node name="DebugMenu" type="CanvasLayer" parent="."]
@@ -664,8 +698,8 @@ layout_mode = 2
 [node name="DebugOutput" type="RichTextLabel" parent="DebugMenu/Control/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-text = "Offset Coords: (12, 1)
-Axel Coords: (12, 1, -13)"
+text = "Offset Coords: (12, 0)
+Axel Coords: (12, 0, -12)"
 fit_content = true
 
 [node name="TextureRect" type="TextureRect" parent="DebugMenu/Control/MarginContainer/VBoxContainer"]
@@ -691,7 +725,7 @@ offset_left = 127.0
 offset_top = 46.0
 offset_right = 167.0
 offset_bottom = 86.0
-text = "r=1"
+text = "r=0"
 
 [node name="s" type="RichTextLabel" parent="DebugMenu/Control/MarginContainer/VBoxContainer/TextureRect"]
 custom_minimum_size = Vector2(100, 0)
@@ -700,7 +734,7 @@ offset_left = 68.0
 offset_top = 64.0
 offset_right = 108.0
 offset_bottom = 104.0
-text = "s=-13"
+text = "s=-12"
 
 [node name="Sidebar" type="Control" parent="DebugMenu/Control/MarginContainer"]
 custom_minimum_size = Vector2(250, 0)
@@ -743,5 +777,15 @@ hex_resource = ExtResource("11_81mvj")
 [node name="@Control@425566" parent="DebugMenu/Control/MarginContainer/Sidebar/VBoxContainer/HexList" instance=ExtResource("8_db0n7")]
 layout_mode = 2
 hex_resource = ExtResource("11_vwsb4")
+
+[node name="Instructions" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(1000, 100)
+offset_left = 383.0
+offset_top = 50.0
+offset_right = 1383.0
+offset_bottom = 150.0
+theme_override_font_sizes/normal_font_size = 36
+bbcode_enabled = true
+text = "[center][wave]Leave This Cave, Or Die Trying."
 
 [connection signal="pressed" from="DebugMenu/Control/MarginContainer/Sidebar/VBoxContainer/SaveLevel" to="Terrain" method="_on_save_level_pressed" flags=18]

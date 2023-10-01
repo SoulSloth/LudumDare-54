@@ -1,8 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://obvkgc3wbfg6"]
+[gd_scene load_steps=6 format=3 uid="uid://obvkgc3wbfg6"]
 
 [ext_resource type="Texture2D" uid="uid://g6v1ah2botj5" path="res://assets/blender/hexes/0010.png" id="2_88xmx"]
 [ext_resource type="Script" path="res://hex.gd" id="2_afq3a"]
 [ext_resource type="Resource" uid="uid://dc4qyh0x0k7e5" path="res://CustomResources/Hexes/Ground.tres" id="2_xllye"]
+
+[sub_resource type="Curve" id="Curve_jj3rs"]
+_data = [Vector2(0, 0.768421), 0.0, 0.0, 0, 0, Vector2(0.641379, 0.442105), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_3dlyh"]
+offsets = PackedFloat32Array(0.272277, 0.831683)
+colors = PackedColorArray(0.541477, 0.328296, 0.120337, 1, 1, 0.644333, 0.03, 1)
 
 [node name="Hex" type="Node2D"]
 script = ExtResource("2_afq3a")
@@ -27,6 +35,23 @@ visible = false
 position = Vector2(0, 47)
 color = Color(1, 1, 1, 0.45098)
 polygon = PackedVector2Array(-1, -5, -58, -28, -58, -75, -1, -98, 56, -75, 56, -28)
+
+[node name="Mine" type="CPUParticles2D" parent="."]
+z_index = 1
+emitting = false
+amount = 16
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+direction = Vector2(0, -1)
+gravity = Vector2(0, 500)
+initial_velocity_min = 88.89
+initial_velocity_max = 248.89
+scale_amount_min = 31.11
+scale_amount_max = 32.11
+scale_amount_curve = SubResource("Curve_jj3rs")
+color = Color(0.25098, 0.12549, 0, 0.976471)
+color_initial_ramp = SubResource("Gradient_3dlyh")
 
 [connection signal="input_event" from="Selection" to="." method="_on_selection_input_event"]
 [connection signal="mouse_entered" from="Selection" to="." method="_on_selection_mouse_entered"]

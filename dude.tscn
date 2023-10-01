@@ -1,12 +1,39 @@
-[gd_scene load_steps=3 format=3 uid="uid://bf1xxms570tab"]
+[gd_scene load_steps=8 format=3 uid="uid://bf1xxms570tab"]
 
 [ext_resource type="Script" path="res://dude.gd" id="1_78p1f"]
 [ext_resource type="Texture2D" uid="uid://cxwnwdvd8wr16" path="res://assets/blender/hexes/0005.png" id="1_akibg"]
+[ext_resource type="AudioStream" uid="uid://dbpbm7e58hqu6" path="res://assets/sfx/canttravel.wav" id="3_q16of"]
+[ext_resource type="AudioStream" uid="uid://dvs2scrn640wj" path="res://assets/sfx/goalReached.wav" id="4_g7hp6"]
+[ext_resource type="AudioStream" uid="uid://dayfbod6koofq" path="res://assets/sfx/move.wav" id="5_cw0a7"]
+[ext_resource type="AudioStream" uid="uid://ltbc32yh4p12" path="res://assets/sfx/newPath.wav" id="6_ppkmv"]
+[ext_resource type="AudioStream" uid="uid://cvkj7u4trifyc" path="res://assets/sfx/WallBreak.wav" id="7_luw0x"]
 
 [node name="agent" type="Node2D" groups=["agent"]]
 script = ExtResource("1_78p1f")
 
 [node name="Sprite" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.623529)
 position = Vector2(0, -39)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_akibg")
+
+[node name="Cant" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_q16of")
+
+[node name="GameWon" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_g7hp6")
+
+[node name="Move" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_cw0a7")
+volume_db = -21.647
+pitch_scale = 1.52
+
+[node name="NewPath" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ppkmv")
+volume_db = -21.647
+pitch_scale = 1.52
+
+[node name="WallBreak" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_luw0x")
+volume_db = -21.647
+pitch_scale = 1.52
