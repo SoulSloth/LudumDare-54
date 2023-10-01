@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="HexResource" load_steps=4 format=3 uid="uid://dq51unc5e1nq6"]
+
+[ext_resource type="Script" path="res://CustomResources/Hexes/HexResource.gd" id="1_0snry"]
+[ext_resource type="Texture2D" uid="uid://g6v1ah2botj5" path="res://assets/blender/hexes/0010.png" id="1_rewqg"]
+[ext_resource type="Texture2D" uid="uid://b0uxdd8osso07" path="res://assets/blender/hexes/0002.png" id="2_puaco"]
+
+[resource]
+script = ExtResource("1_0snry")
+texture = ExtResource("2_puaco")
+mined_texture = ExtResource("1_rewqg")
+name = "Dirt"
+durability = 100.0
+passable = false
+z_index = 1
+Desc = "Basic Dirt. No special resources."

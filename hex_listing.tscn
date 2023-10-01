@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=3 uid="uid://sq2s6tqs8spa"]
+
+[ext_resource type="Script" path="res://HexListing.gd" id="1_teovg"]
+[ext_resource type="Resource" uid="uid://dq51unc5e1nq6" path="res://CustomResources/Hexes/Dirt.tres" id="2_76yek"]
+[ext_resource type="Texture2D" uid="uid://b0uxdd8osso07" path="res://assets/blender/hexes/0002.png" id="3_jp8de"]
+
+[node name="HexListing" type="Control"]
+custom_minimum_size = Vector2(250, 150)
+layout_mode = 3
+anchors_preset = 0
+size_flags_vertical = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+script = ExtResource("1_teovg")
+hex_resource = ExtResource("2_76yek")
+
+[node name="Background" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(175, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+color = Color(0.160784, 0.160784, 0.160784, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+texture = ExtResource("3_jp8de")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="HexLabel" type="RichTextLabel" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+bbcode_enabled = true
+text = "Foo"
+fit_content = true
+
+[node name="HexDesc" type="RichTextLabel" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Foo"
+fit_content = true
+
+[node name="MouseCatch" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+color = Color(0.156863, 0.156863, 0.156863, 0)
+
+[connection signal="gui_input" from="MouseCatch" to="." method="_on_mouse_catch_gui_input"]
+[connection signal="mouse_entered" from="MouseCatch" to="." method="_on_mouse_catch_mouse_entered"]
+[connection signal="mouse_exited" from="MouseCatch" to="." method="_on_mouse_catch_mouse_exited"]

@@ -1,600 +1,634 @@
-[gd_scene load_steps=7 format=3 uid="uid://dlprjoioxvnmi"]
+[gd_scene load_steps=12 format=3 uid="uid://dlprjoioxvnmi"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_xjq3b"]
 [ext_resource type="Script" path="res://Terrain.gd" id="3_0av84"]
+[ext_resource type="Resource" uid="uid://dq51unc5e1nq6" path="res://CustomResources/Hexes/Dirt.tres" id="3_g82uq"]
 [ext_resource type="PackedScene" uid="uid://obvkgc3wbfg6" path="res://hex.tscn" id="3_lbtpk"]
 [ext_resource type="PackedScene" uid="uid://bf1xxms570tab" path="res://dude.tscn" id="5_i6ui0"]
 [ext_resource type="Script" path="res://DebugMenu.gd" id="6_q81dx"]
 [ext_resource type="Texture2D" uid="uid://bd2mat72q55b7" path="res://assets/blender/hexes/0003.png" id="7_axyth"]
+[ext_resource type="Script" path="res://HexList.gd" id="7_rskwh"]
+[ext_resource type="PackedScene" uid="uid://sq2s6tqs8spa" path="res://hex_listing.tscn" id="8_db0n7"]
+[ext_resource type="Resource" uid="uid://sx7ehhe8g7ao" path="res://CustomResources/Hexes/Goal.tres" id="11_81mvj"]
+[ext_resource type="Resource" uid="uid://dc4qyh0x0k7e5" path="res://CustomResources/Hexes/Ground.tres" id="11_vwsb4"]
 
 [node name="Game" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_xjq3b")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -1554.0
+offset_top = -683.0
+offset_right = 4424.0
+offset_bottom = 2224.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(964, 540)
 
 [node name="Terrain" type="Node2D" parent="."]
+y_sort_enabled = true
 script = ExtResource("3_0av84")
 x_hexes = 13
 y_hexes = 11
 x_diff = 114
 y_diff = 70
+selected_hex_resource = ExtResource("11_81mvj")
 
-[node name="Hex" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329707" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(200, 200)
 
-[node name="@Node2D@113555" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329708" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(314, 200)
 coords = Vector2(1, 0)
 
-[node name="@Node2D@113556" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329709" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(428, 200)
 coords = Vector2(2, 0)
 
-[node name="@Node2D@113557" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329710" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(542, 200)
 coords = Vector2(3, 0)
 
-[node name="@Node2D@113558" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329711" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(656, 200)
 coords = Vector2(4, 0)
 
-[node name="@Node2D@113559" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329712" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(770, 200)
 coords = Vector2(5, 0)
 
-[node name="@Node2D@113560" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329713" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(884, 200)
 coords = Vector2(6, 0)
 
-[node name="@Node2D@113561" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329714" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(998, 200)
 coords = Vector2(7, 0)
 
-[node name="@Node2D@113562" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329715" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1112, 200)
 coords = Vector2(8, 0)
 
-[node name="@Node2D@113563" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329716" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1226, 200)
 coords = Vector2(9, 0)
 
-[node name="@Node2D@113564" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329717" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1340, 200)
 coords = Vector2(10, 0)
 
-[node name="@Node2D@113565" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329718" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1454, 200)
 coords = Vector2(11, 0)
 
-[node name="@Node2D@113566" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329719" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1568, 200)
 coords = Vector2(12, 0)
 
-[node name="@Node2D@113567" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329720" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(257, 270)
 coords = Vector2(0, 1)
 
-[node name="@Node2D@113568" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329721" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(371, 270)
 coords = Vector2(1, 1)
 
-[node name="@Node2D@113569" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329722" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(485, 270)
 coords = Vector2(2, 1)
+hex_resource = ExtResource("3_g82uq")
 
-[node name="@Node2D@113570" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329723" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(599, 270)
 coords = Vector2(3, 1)
+hex_resource = ExtResource("3_g82uq")
 
-[node name="@Node2D@113571" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329724" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(713, 270)
 coords = Vector2(4, 1)
+hex_resource = ExtResource("3_g82uq")
 
-[node name="@Node2D@113572" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329725" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(827, 270)
 coords = Vector2(5, 1)
+hex_resource = ExtResource("3_g82uq")
 
-[node name="@Node2D@113573" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329726" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(941, 270)
 coords = Vector2(6, 1)
+hex_resource = ExtResource("3_g82uq")
 
-[node name="@Node2D@113574" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329727" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1055, 270)
 coords = Vector2(7, 1)
 
-[node name="@Node2D@113575" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329728" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1169, 270)
 coords = Vector2(8, 1)
 
-[node name="@Node2D@113576" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329729" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1283, 270)
 coords = Vector2(9, 1)
 
-[node name="@Node2D@113577" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329730" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1397, 270)
 coords = Vector2(10, 1)
 
-[node name="@Node2D@113578" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329731" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1511, 270)
 coords = Vector2(11, 1)
 
-[node name="@Node2D@113579" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329732" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1625, 270)
 coords = Vector2(12, 1)
 
-[node name="@Node2D@113580" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329733" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(200, 340)
 coords = Vector2(0, 2)
 
-[node name="@Node2D@113581" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329734" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(314, 340)
 coords = Vector2(1, 2)
 
-[node name="@Node2D@113582" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329735" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(428, 340)
 coords = Vector2(2, 2)
 
-[node name="@Node2D@113583" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329736" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(542, 340)
 coords = Vector2(3, 2)
 
-[node name="@Node2D@113584" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329737" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(656, 340)
 coords = Vector2(4, 2)
 
-[node name="@Node2D@113585" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329738" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(770, 340)
 coords = Vector2(5, 2)
 
-[node name="@Node2D@113586" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329739" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(884, 340)
 coords = Vector2(6, 2)
 
-[node name="@Node2D@113587" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329740" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(998, 340)
 coords = Vector2(7, 2)
 
-[node name="@Node2D@113588" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329741" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1112, 340)
 coords = Vector2(8, 2)
 
-[node name="@Node2D@113589" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329742" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1226, 340)
 coords = Vector2(9, 2)
 
-[node name="@Node2D@113590" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329743" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1340, 340)
 coords = Vector2(10, 2)
 
-[node name="@Node2D@113591" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329744" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1454, 340)
 coords = Vector2(11, 2)
 
-[node name="@Node2D@113592" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329745" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1568, 340)
 coords = Vector2(12, 2)
 
-[node name="@Node2D@113593" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329746" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(257, 410)
 coords = Vector2(0, 3)
 
-[node name="@Node2D@113594" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329747" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(371, 410)
 coords = Vector2(1, 3)
 
-[node name="@Node2D@113595" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329748" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(485, 410)
 coords = Vector2(2, 3)
 
-[node name="@Node2D@113596" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329749" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(599, 410)
 coords = Vector2(3, 3)
 
-[node name="@Node2D@113597" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329750" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(713, 410)
 coords = Vector2(4, 3)
 
-[node name="@Node2D@113598" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329751" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(827, 410)
 coords = Vector2(5, 3)
 
-[node name="@Node2D@113599" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329752" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(941, 410)
 coords = Vector2(6, 3)
 
-[node name="@Node2D@113600" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329753" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1055, 410)
 coords = Vector2(7, 3)
 
-[node name="@Node2D@113601" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329754" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1169, 410)
 coords = Vector2(8, 3)
 
-[node name="@Node2D@113602" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329755" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1283, 410)
 coords = Vector2(9, 3)
 
-[node name="@Node2D@113603" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329756" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1397, 410)
 coords = Vector2(10, 3)
 
-[node name="@Node2D@113604" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329757" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1511, 410)
 coords = Vector2(11, 3)
 
-[node name="@Node2D@113605" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329758" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1625, 410)
 coords = Vector2(12, 3)
 
-[node name="@Node2D@113606" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329759" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(200, 480)
 coords = Vector2(0, 4)
 
-[node name="@Node2D@113607" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329760" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(314, 480)
 coords = Vector2(1, 4)
 
-[node name="@Node2D@113608" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329761" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(428, 480)
 coords = Vector2(2, 4)
 
-[node name="@Node2D@113609" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329762" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(542, 480)
 coords = Vector2(3, 4)
 
-[node name="@Node2D@113610" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329763" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(656, 480)
 coords = Vector2(4, 4)
 
-[node name="@Node2D@113611" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329764" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(770, 480)
 coords = Vector2(5, 4)
 
-[node name="@Node2D@113612" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329765" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(884, 480)
 coords = Vector2(6, 4)
 
-[node name="@Node2D@113613" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329766" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(998, 480)
 coords = Vector2(7, 4)
 
-[node name="@Node2D@113614" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329767" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1112, 480)
 coords = Vector2(8, 4)
 
-[node name="@Node2D@113615" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329768" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1226, 480)
 coords = Vector2(9, 4)
 
-[node name="@Node2D@113616" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329769" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1340, 480)
 coords = Vector2(10, 4)
 
-[node name="@Node2D@113617" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329770" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1454, 480)
 coords = Vector2(11, 4)
 
-[node name="@Node2D@113618" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329771" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1568, 480)
 coords = Vector2(12, 4)
 
-[node name="@Node2D@113619" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329772" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(257, 550)
 coords = Vector2(0, 5)
 
-[node name="@Node2D@113620" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329773" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(371, 550)
 coords = Vector2(1, 5)
 
-[node name="@Node2D@113621" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329774" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(485, 550)
 coords = Vector2(2, 5)
 
-[node name="@Node2D@113622" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329775" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(599, 550)
 coords = Vector2(3, 5)
 
-[node name="@Node2D@113623" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329776" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(713, 550)
 coords = Vector2(4, 5)
 
-[node name="@Node2D@113624" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329777" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(827, 550)
 coords = Vector2(5, 5)
 
-[node name="@Node2D@113625" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329778" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(941, 550)
 coords = Vector2(6, 5)
 
-[node name="@Node2D@113626" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329779" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1055, 550)
 coords = Vector2(7, 5)
 
-[node name="@Node2D@113627" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329780" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1169, 550)
 coords = Vector2(8, 5)
 
-[node name="@Node2D@113628" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329781" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1283, 550)
 coords = Vector2(9, 5)
 
-[node name="@Node2D@113629" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329782" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1397, 550)
 coords = Vector2(10, 5)
 
-[node name="@Node2D@113630" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329783" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1511, 550)
 coords = Vector2(11, 5)
 
-[node name="@Node2D@113631" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329784" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1625, 550)
 coords = Vector2(12, 5)
 
-[node name="@Node2D@113632" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329785" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(200, 620)
 coords = Vector2(0, 6)
 
-[node name="@Node2D@113633" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329786" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(314, 620)
 coords = Vector2(1, 6)
 
-[node name="@Node2D@113634" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329787" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(428, 620)
 coords = Vector2(2, 6)
 
-[node name="@Node2D@113635" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329788" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(542, 620)
 coords = Vector2(3, 6)
 
-[node name="@Node2D@113636" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329789" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(656, 620)
 coords = Vector2(4, 6)
 
-[node name="@Node2D@113637" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329790" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(770, 620)
 coords = Vector2(5, 6)
 
-[node name="@Node2D@113638" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329791" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(884, 620)
 coords = Vector2(6, 6)
 
-[node name="@Node2D@113639" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329792" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(998, 620)
 coords = Vector2(7, 6)
 
-[node name="@Node2D@113640" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329793" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1112, 620)
 coords = Vector2(8, 6)
 
-[node name="@Node2D@113641" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329794" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1226, 620)
 coords = Vector2(9, 6)
+hex_resource = ExtResource("3_g82uq")
 
-[node name="@Node2D@113642" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329795" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1340, 620)
 coords = Vector2(10, 6)
 
-[node name="@Node2D@113643" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329796" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1454, 620)
 coords = Vector2(11, 6)
+hex_resource = ExtResource("3_g82uq")
 
-[node name="@Node2D@113644" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329797" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1568, 620)
 coords = Vector2(12, 6)
 
-[node name="@Node2D@113645" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329798" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(257, 690)
 coords = Vector2(0, 7)
 
-[node name="@Node2D@113646" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329799" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(371, 690)
 coords = Vector2(1, 7)
 
-[node name="@Node2D@113647" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329800" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(485, 690)
 coords = Vector2(2, 7)
 
-[node name="@Node2D@113648" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329801" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(599, 690)
 coords = Vector2(3, 7)
 
-[node name="@Node2D@113649" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329802" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(713, 690)
 coords = Vector2(4, 7)
 
-[node name="@Node2D@113650" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329803" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(827, 690)
 coords = Vector2(5, 7)
 
-[node name="@Node2D@113651" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329804" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(941, 690)
 coords = Vector2(6, 7)
 
-[node name="@Node2D@113652" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329805" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1055, 690)
 coords = Vector2(7, 7)
+hex_resource = ExtResource("3_g82uq")
 
-[node name="@Node2D@113653" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329806" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1169, 690)
 coords = Vector2(8, 7)
+hex_resource = ExtResource("3_g82uq")
 
-[node name="@Node2D@113654" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329807" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1283, 690)
 coords = Vector2(9, 7)
+hex_resource = ExtResource("3_g82uq")
 
-[node name="@Node2D@113655" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329808" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1397, 690)
 coords = Vector2(10, 7)
+hex_resource = ExtResource("3_g82uq")
 
-[node name="@Node2D@113656" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329809" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1511, 690)
 coords = Vector2(11, 7)
+hex_resource = ExtResource("3_g82uq")
 
-[node name="@Node2D@113657" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329810" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1625, 690)
 coords = Vector2(12, 7)
+hex_resource = ExtResource("3_g82uq")
 
-[node name="@Node2D@113658" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329811" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(200, 760)
 coords = Vector2(0, 8)
 
-[node name="@Node2D@113659" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329812" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(314, 760)
 coords = Vector2(1, 8)
 
-[node name="@Node2D@113660" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329813" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(428, 760)
 coords = Vector2(2, 8)
 
-[node name="@Node2D@113661" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329814" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(542, 760)
 coords = Vector2(3, 8)
 
-[node name="@Node2D@113662" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329815" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(656, 760)
 coords = Vector2(4, 8)
 
-[node name="@Node2D@113663" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329816" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(770, 760)
 coords = Vector2(5, 8)
 
-[node name="@Node2D@113664" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329817" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(884, 760)
 coords = Vector2(6, 8)
 
-[node name="@Node2D@113665" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329818" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(998, 760)
 coords = Vector2(7, 8)
 
-[node name="@Node2D@113666" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329819" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1112, 760)
 coords = Vector2(8, 8)
 
-[node name="@Node2D@113667" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329820" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1226, 760)
 coords = Vector2(9, 8)
+hex_resource = ExtResource("3_g82uq")
 
-[node name="@Node2D@113668" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329821" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1340, 760)
 coords = Vector2(10, 8)
+hex_resource = ExtResource("3_g82uq")
 
-[node name="@Node2D@113669" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329822" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1454, 760)
 coords = Vector2(11, 8)
 
-[node name="@Node2D@113670" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329823" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1568, 760)
 coords = Vector2(12, 8)
 
-[node name="@Node2D@113671" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329824" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(257, 830)
 coords = Vector2(0, 9)
 
-[node name="@Node2D@113672" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329825" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(371, 830)
 coords = Vector2(1, 9)
 
-[node name="@Node2D@113673" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329826" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(485, 830)
 coords = Vector2(2, 9)
 
-[node name="@Node2D@113674" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329827" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(599, 830)
 coords = Vector2(3, 9)
 
-[node name="@Node2D@113675" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329828" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(713, 830)
 coords = Vector2(4, 9)
 
-[node name="@Node2D@113676" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329829" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(827, 830)
 coords = Vector2(5, 9)
 
-[node name="@Node2D@113677" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329830" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(941, 830)
 coords = Vector2(6, 9)
 
-[node name="@Node2D@113678" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329831" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1055, 830)
 coords = Vector2(7, 9)
 
-[node name="@Node2D@113679" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329832" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1169, 830)
 coords = Vector2(8, 9)
+hex_resource = ExtResource("3_g82uq")
 
-[node name="@Node2D@113680" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329833" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1283, 830)
 coords = Vector2(9, 9)
 
-[node name="@Node2D@113681" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329834" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1397, 830)
 coords = Vector2(10, 9)
 
-[node name="@Node2D@113682" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329835" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1511, 830)
 coords = Vector2(11, 9)
 
-[node name="@Node2D@113683" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329836" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1625, 830)
 coords = Vector2(12, 9)
 
-[node name="@Node2D@113684" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329837" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(200, 900)
 coords = Vector2(0, 10)
 
-[node name="@Node2D@113685" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329838" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(314, 900)
 coords = Vector2(1, 10)
 
-[node name="@Node2D@113686" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329839" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(428, 900)
 coords = Vector2(2, 10)
 
-[node name="@Node2D@113687" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329840" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(542, 900)
 coords = Vector2(3, 10)
 
-[node name="@Node2D@113688" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329841" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(656, 900)
 coords = Vector2(4, 10)
 
-[node name="@Node2D@113689" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329842" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(770, 900)
 coords = Vector2(5, 10)
 
-[node name="@Node2D@113690" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329843" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(884, 900)
 coords = Vector2(6, 10)
 
-[node name="@Node2D@113691" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329844" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(998, 900)
 coords = Vector2(7, 10)
 
-[node name="@Node2D@113692" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329845" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1112, 900)
 coords = Vector2(8, 10)
 
-[node name="@Node2D@113693" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329846" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1226, 900)
 coords = Vector2(9, 10)
+hex_resource = ExtResource("3_g82uq")
 
-[node name="@Node2D@113694" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329847" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1340, 900)
 coords = Vector2(10, 10)
 
-[node name="@Node2D@113695" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329848" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1454, 900)
 coords = Vector2(11, 10)
 
-[node name="@Node2D@113696" parent="Terrain" instance=ExtResource("3_lbtpk")]
+[node name="@Node2D@329849" parent="Terrain" instance=ExtResource("3_lbtpk")]
 position = Vector2(1568, 900)
 coords = Vector2(12, 10)
+hex_resource = ExtResource("11_81mvj")
+
+[node name="agent" parent="Terrain" instance=ExtResource("5_i6ui0")]
+position = Vector2(257, 345)
 
 [node name="Agents" type="Node2D" parent="."]
-
-[node name="Dude" parent="Agents" instance=ExtResource("5_i6ui0")]
-position = Vector2(200, 135)
 
 [node name="TickTimer" type="Timer" parent="."]
 wait_time = 0.5
@@ -610,7 +644,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
+mouse_filter = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="DebugMenu/Control"]
 layout_mode = 1
@@ -630,8 +664,8 @@ layout_mode = 2
 [node name="DebugOutput" type="RichTextLabel" parent="DebugMenu/Control/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-text = "Offset Coords
-Axel Coords:"
+text = "Offset Coords: (12, 1)
+Axel Coords: (12, 1, -13)"
 fit_content = true
 
 [node name="TextureRect" type="TextureRect" parent="DebugMenu/Control/MarginContainer/VBoxContainer"]
@@ -648,7 +682,7 @@ offset_left = 63.0
 offset_top = 21.0
 offset_right = 103.0
 offset_bottom = 61.0
-text = "Q"
+text = "q=12"
 
 [node name="r" type="RichTextLabel" parent="DebugMenu/Control/MarginContainer/VBoxContainer/TextureRect"]
 custom_minimum_size = Vector2(100, 0)
@@ -657,7 +691,7 @@ offset_left = 127.0
 offset_top = 46.0
 offset_right = 167.0
 offset_bottom = 86.0
-text = "R"
+text = "r=1"
 
 [node name="s" type="RichTextLabel" parent="DebugMenu/Control/MarginContainer/VBoxContainer/TextureRect"]
 custom_minimum_size = Vector2(100, 0)
@@ -666,5 +700,48 @@ offset_left = 68.0
 offset_top = 64.0
 offset_right = 108.0
 offset_bottom = 104.0
-text = "S
-"
+text = "s=-13"
+
+[node name="Sidebar" type="Control" parent="DebugMenu/Control/MarginContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="ColorRect" type="ColorRect" parent="DebugMenu/Control/MarginContainer/Sidebar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.34902)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DebugMenu/Control/MarginContainer/Sidebar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SaveLevel" type="Button" parent="DebugMenu/Control/MarginContainer/Sidebar/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Save Level"
+
+[node name="HexList" type="VBoxContainer" parent="DebugMenu/Control/MarginContainer/Sidebar/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("7_rskwh")
+
+[node name="HexListing" parent="DebugMenu/Control/MarginContainer/Sidebar/VBoxContainer/HexList" instance=ExtResource("8_db0n7")]
+layout_mode = 2
+
+[node name="@Control@425563" parent="DebugMenu/Control/MarginContainer/Sidebar/VBoxContainer/HexList" instance=ExtResource("8_db0n7")]
+layout_mode = 2
+hex_resource = ExtResource("11_81mvj")
+
+[node name="@Control@425566" parent="DebugMenu/Control/MarginContainer/Sidebar/VBoxContainer/HexList" instance=ExtResource("8_db0n7")]
+layout_mode = 2
+hex_resource = ExtResource("11_vwsb4")
+
+[connection signal="pressed" from="DebugMenu/Control/MarginContainer/Sidebar/VBoxContainer/SaveLevel" to="Terrain" method="_on_save_level_pressed" flags=18]

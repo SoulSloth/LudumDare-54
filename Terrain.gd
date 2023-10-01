@@ -6,20 +6,21 @@ extends Node2D
 @export var y_hexes = 5 
 @export var x_diff = 84
 @export var y_diff = 100
-@export var remake_grid = false: set= _do_remake_grid
-
+@export var remake_grid = false #: set= _do_remake_grid
+@export var selected_hex_resource : HexResource;
 var offset_array : Array[Array] = []
 
 func _ready() -> void:
-	SignalBus.connect("hex_changed_editor",_save_level)
+	SignalBus.editor_hex_selected.connect(_update_selected_hex)
 
+func _update_selected_hex(new_hex : HexResource):
+	selected_hex_resource = new_hex
+	
 func _draw_board_x(new_x):
 	x_hexes = new_x
-	_do_remake_grid()
 	
 func _draw_board_y(new_y):
 	y_hexes = new_y
-	_do_remake_grid()
 
 func _do_remake_grid(_p_remake_grid = null):
 	print("remaking grid")
@@ -41,17 +42,20 @@ func _do_remake_grid(_p_remake_grid = null):
 				new_hex.set_owner(get_tree().edited_scene_root)
 				offset_array[y_hex].append(new_hex)
 			offset = !offset
-	print(offset_array)
 
-func _save_level(_hex) -> void:
+func _save_level() -> void:
 	var scene = PackedScene.new()
 	var scene_root = get_parent()
 	_set_owner(scene_root,scene_root)
 	scene.pack(scene_root)
-	print(ResourceSaver.save(scene,'res://TestSave.tscn'))
+	var save_error = ResourceSaver.save(scene,'res://main.tscn')
+	assert(save_error == 0, "Scene could not be saved, error code %d" % save_error)
 
 func _set_owner(node,root):
-	if node != root:
-		node.owner = root
-	for child in node.get_children():
-		_set_owner(child, root)
+	if node != root and !node.scene_file_path:
+		for child in node.get_children():
+			_set_owner(child, root)
+
+
+func _on_save_level_pressed() -> void:
+	_save_level()

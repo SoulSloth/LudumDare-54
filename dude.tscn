@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://dude.gd" id="1_78p1f"]
 [ext_resource type="Texture2D" uid="uid://cxwnwdvd8wr16" path="res://assets/blender/hexes/0005.png" id="1_akibg"]
 
-[node name="agent" type="Node2D"]
+[node name="agent" type="Node2D" groups=["agent"]]
 script = ExtResource("1_78p1f")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-position = Vector2(0, -36)
+position = Vector2(0, -39)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_akibg")

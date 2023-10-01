@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HexResource" load_steps=3 format=3 uid="uid://dc4qyh0x0k7e5"]
+
+[ext_resource type="Texture2D" uid="uid://banna5bgcwuna" path="res://assets/blender/hexes/0011.png" id="1_6flmf"]
+[ext_resource type="Script" path="res://CustomResources/Hexes/HexResource.gd" id="1_matbm"]
+
+[resource]
+script = ExtResource("1_matbm")
+texture = ExtResource("1_6flmf")
+mined_texture = ExtResource("1_6flmf")
+name = "Ground"
+durability = 0.0
+passable = true
+Desc = "Basic ground. Good for walking on."

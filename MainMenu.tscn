@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://1lef6t5hpudt"]
+[gd_scene load_steps=6 format=3 uid="uid://1lef6t5hpudt"]
 
 [ext_resource type="Script" path="res://MainMenuHexLine.gd" id="1_3244j"]
+[ext_resource type="Script" path="res://MainMenu.gd" id="1_vlyrs"]
 [ext_resource type="PackedScene" uid="uid://obvkgc3wbfg6" path="res://hex.tscn" id="2_1twdu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nhlh2"]
@@ -25,13 +26,14 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[node name="Control" type="Control"]
+[node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_vlyrs")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -50,52 +52,52 @@ y_hexes = 1
 x_diff = 115
 
 [node name="Sprite" parent="Node2D2" instance=ExtResource("2_1twdu")]
-position = Vector2(200, 203.911)
+position = Vector2(200, 207.639)
 
 [node name="_Sprite2D_34080" parent="Node2D2" instance=ExtResource("2_1twdu")]
-position = Vector2(315, 195.525)
+position = Vector2(315, 185.469)
 
 [node name="_Sprite2D_34081" parent="Node2D2" instance=ExtResource("2_1twdu")]
-position = Vector2(430, 203.291)
+position = Vector2(430, 216.098)
 
 [node name="_Sprite2D_34082" parent="Node2D2" instance=ExtResource("2_1twdu")]
-position = Vector2(545, 198.882)
+position = Vector2(545, 187.587)
 
 [node name="_Sprite2D_34083" parent="Node2D2" instance=ExtResource("2_1twdu")]
-position = Vector2(660, 198.987)
+position = Vector2(660, 205.246)
 
 [node name="_Sprite2D_34084" parent="Node2D2" instance=ExtResource("2_1twdu")]
-position = Vector2(775, 202.28)
+position = Vector2(775, 202.793)
 
 [node name="_Sprite2D_34085" parent="Node2D2" instance=ExtResource("2_1twdu")]
-position = Vector2(890, 197.625)
+position = Vector2(890, 190.788)
 
 [node name="_Sprite2D_34086" parent="Node2D2" instance=ExtResource("2_1twdu")]
-position = Vector2(1005, 201.558)
+position = Vector2(1005, 212.384)
 
 [node name="_Sprite2D_34087" parent="Node2D2" instance=ExtResource("2_1twdu")]
-position = Vector2(1120, 199.56)
+position = Vector2(1120, 188.154)
 
 [node name="_Sprite2D_34088" parent="Node2D2" instance=ExtResource("2_1twdu")]
-position = Vector2(1235, 199.612)
+position = Vector2(1235, 208.151)
 
 [node name="_Sprite2D_34089" parent="Node2D2" instance=ExtResource("2_1twdu")]
-position = Vector2(1350, 200.627)
+position = Vector2(1350, 197.479)
 
 [node name="_Sprite2D_34090" parent="Node2D2" instance=ExtResource("2_1twdu")]
-position = Vector2(1465, 199.61)
+position = Vector2(1465, 196.437)
 
 [node name="_Sprite2D_34091" parent="Node2D2" instance=ExtResource("2_1twdu")]
-position = Vector2(1580, 200.072)
+position = Vector2(1580, 208.668)
 
 [node name="_Sprite2D_34092" parent="Node2D2" instance=ExtResource("2_1twdu")]
-position = Vector2(1695, 199.952)
+position = Vector2(1695, 188.433)
 
 [node name="_Sprite2D_34093" parent="Node2D2" instance=ExtResource("2_1twdu")]
-position = Vector2(1810, 200.46)
+position = Vector2(1810, 211.442)
 
 [node name="_Sprite2D_34094" parent="Node2D2" instance=ExtResource("2_1twdu")]
-position = Vector2(1925, 198.938)
+position = Vector2(1925, 191.958)
 
 [node name="Node2D3" type="Node2D" parent="."]
 position = Vector2(-42, 51)
@@ -105,28 +107,28 @@ y_hexes = 8
 x_diff = 115
 
 [node name="@Sprite2D@61787" parent="Node2D3" instance=ExtResource("2_1twdu")]
-position = Vector2(200, 190.981)
+position = Vector2(200, 162.204)
 
 [node name="@Sprite2D@61788" parent="Node2D3" instance=ExtResource("2_1twdu")]
-position = Vector2(257, 325.457)
+position = Vector2(257, 356.485)
 
 [node name="@Sprite2D@61789" parent="Node2D3" instance=ExtResource("2_1twdu")]
-position = Vector2(200, 366.255)
+position = Vector2(200, 342.722)
 
 [node name="@Sprite2D@61790" parent="Node2D3" instance=ExtResource("2_1twdu")]
-position = Vector2(257, 530.697)
+position = Vector2(257, 539.242)
 
 [node name="@Sprite2D@61791" parent="Node2D3" instance=ExtResource("2_1twdu")]
-position = Vector2(200, 583.114)
+position = Vector2(200, 592.479)
 
 [node name="@Sprite2D@61792" parent="Node2D3" instance=ExtResource("2_1twdu")]
-position = Vector2(257, 696.757)
+position = Vector2(257, 672.078)
 
 [node name="@Sprite2D@61793" parent="Node2D3" instance=ExtResource("2_1twdu")]
-position = Vector2(200, 822.88)
+position = Vector2(200, 855.335)
 
 [node name="@Sprite2D@61794" parent="Node2D3" instance=ExtResource("2_1twdu")]
-position = Vector2(257, 864.938)
+position = Vector2(257, 835.029)
 
 [node name="Node2D4" type="Node2D" parent="."]
 position = Vector2(1572, 51)
@@ -136,28 +138,28 @@ y_hexes = 8
 x_diff = 115
 
 [node name="@Sprite2D@62491" parent="Node2D4" instance=ExtResource("2_1twdu")]
-position = Vector2(200, 200.937)
+position = Vector2(200, 172.16)
 
 [node name="@Sprite2D@62492" parent="Node2D4" instance=ExtResource("2_1twdu")]
-position = Vector2(257, 316.791)
+position = Vector2(257, 347.819)
 
 [node name="@Sprite2D@62493" parent="Node2D4" instance=ExtResource("2_1twdu")]
-position = Vector2(200, 370.738)
+position = Vector2(200, 347.205)
 
 [node name="@Sprite2D@62494" parent="Node2D4" instance=ExtResource("2_1twdu")]
-position = Vector2(257, 532.018)
+position = Vector2(257, 540.563)
 
 [node name="@Sprite2D@62495" parent="Node2D4" instance=ExtResource("2_1twdu")]
-position = Vector2(200, 576.239)
+position = Vector2(200, 585.604)
 
 [node name="@Sprite2D@62496" parent="Node2D4" instance=ExtResource("2_1twdu")]
-position = Vector2(257, 707.062)
+position = Vector2(257, 682.383)
 
 [node name="@Sprite2D@62497" parent="Node2D4" instance=ExtResource("2_1twdu")]
-position = Vector2(200, 812.522)
+position = Vector2(200, 844.977)
 
 [node name="@Sprite2D@62498" parent="Node2D4" instance=ExtResource("2_1twdu")]
-position = Vector2(257, 871.812)
+position = Vector2(257, 841.903)
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(-148, 833)
@@ -167,55 +169,55 @@ y_hexes = 1
 x_diff = 115
 
 [node name="@Sprite2D@62862" parent="Node2D" instance=ExtResource("2_1twdu")]
-position = Vector2(200, 190.437)
+position = Vector2(200, 185.359)
 
 [node name="@Sprite2D@62863" parent="Node2D" instance=ExtResource("2_1twdu")]
-position = Vector2(315, 216.978)
+position = Vector2(315, 225.538)
 
 [node name="@Sprite2D@62864" parent="Node2D" instance=ExtResource("2_1twdu")]
-position = Vector2(430, 180.816)
+position = Vector2(430, 171.682)
 
 [node name="@Sprite2D@62865" parent="Node2D" instance=ExtResource("2_1twdu")]
-position = Vector2(545, 215.486)
+position = Vector2(545, 222.111)
 
 [node name="@Sprite2D@62866" parent="Node2D" instance=ExtResource("2_1twdu")]
-position = Vector2(660, 193.11)
+position = Vector2(660, 191.22)
 
 [node name="@Sprite2D@62867" parent="Node2D" instance=ExtResource("2_1twdu")]
-position = Vector2(775, 195.872)
+position = Vector2(775, 192.401)
 
 [node name="@Sprite2D@62868" parent="Node2D" instance=ExtResource("2_1twdu")]
-position = Vector2(890, 214.192)
+position = Vector2(890, 221.858)
 
 [node name="@Sprite2D@62869" parent="Node2D" instance=ExtResource("2_1twdu")]
-position = Vector2(1005, 179.983)
+position = Vector2(1005, 170.671)
 
 [node name="@Sprite2D@62870" parent="Node2D" instance=ExtResource("2_1twdu")]
-position = Vector2(1120, 219.446)
+position = Vector2(1120, 227.31)
 
 [node name="@Sprite2D@62871" parent="Node2D" instance=ExtResource("2_1twdu")]
-position = Vector2(1235, 187.725)
+position = Vector2(1235, 183.928)
 
 [node name="@Sprite2D@62872" parent="Node2D" instance=ExtResource("2_1twdu")]
-position = Vector2(1350, 200.549)
+position = Vector2(1350, 199.003)
 
 [node name="@Sprite2D@62873" parent="Node2D" instance=ExtResource("2_1twdu")]
-position = Vector2(1465, 211.93)
+position = Vector2(1465, 218.347)
 
 [node name="@Sprite2D@62874" parent="Node2D" instance=ExtResource("2_1twdu")]
-position = Vector2(1580, 179.206)
+position = Vector2(1580, 170.006)
 
 [node name="@Sprite2D@62875" parent="Node2D" instance=ExtResource("2_1twdu")]
-position = Vector2(1695, 222.648)
+position = Vector2(1695, 231.596)
 
 [node name="@Sprite2D@62876" parent="Node2D" instance=ExtResource("2_1twdu")]
-position = Vector2(1810, 183.558)
+position = Vector2(1810, 177.853)
 
 [node name="@Sprite2D@62877" parent="Node2D" instance=ExtResource("2_1twdu")]
-position = Vector2(1925, 204.049)
+position = Vector2(1925, 204.557)
 
 [node name="@Sprite2D@62878" parent="Node2D" instance=ExtResource("2_1twdu")]
-position = Vector2(2040, 210.227)
+position = Vector2(2040, 215.174)
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -249,3 +251,5 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ip057")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ip057")
 theme_override_styles/focus = SubResource("StyleBoxFlat_ip057")
 text = "Play"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -1,23 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://obvkgc3wbfg6"]
+[gd_scene load_steps=4 format=3 uid="uid://obvkgc3wbfg6"]
 
 [ext_resource type="Texture2D" uid="uid://g6v1ah2botj5" path="res://assets/blender/hexes/0010.png" id="2_88xmx"]
 [ext_resource type="Script" path="res://hex.gd" id="2_afq3a"]
-[ext_resource type="Texture2D" uid="uid://diard7slgln22" path="res://assets/blender/hexes/0001.png" id="2_vpo5c"]
-[ext_resource type="Texture2D" uid="uid://bd2mat72q55b7" path="res://assets/blender/hexes/0003.png" id="4_7anjg"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_byg3o"]
+[ext_resource type="Resource" uid="uid://dc4qyh0x0k7e5" path="res://CustomResources/Hexes/Ground.tres" id="2_xllye"]
 
 [node name="Hex" type="Node2D"]
 script = ExtResource("2_afq3a")
-sprites = Array[Resource]([SubResource("CompressedTexture2D_byg3o"), ExtResource("2_88xmx"), ExtResource("2_vpo5c"), ExtResource("4_7anjg")])
-sprite_index = 1
+hex_resource = ExtResource("2_xllye")
 
 [node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, 52)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_88xmx")
 region_rect = Rect2(0, 0, 192, 250)
 
 [node name="Selection" type="Area2D" parent="."]
+position = Vector2(0, 52)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Selection"]
 visible = false
